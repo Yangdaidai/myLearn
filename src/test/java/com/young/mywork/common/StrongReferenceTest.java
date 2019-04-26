@@ -1,4 +1,4 @@
-package com.young.MyWork.common;
+package com.young.mywork.common;
 
 import org.junit.Test;
 

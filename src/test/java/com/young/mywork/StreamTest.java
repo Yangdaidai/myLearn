@@ -1,4 +1,4 @@
-package com.young.MyWork;
+package com.young.mywork;
 
 import org.junit.Test;
 
@@ -24,8 +24,7 @@ public class StreamTest {
 
         List<String> stringList = words.stream().flatMap(word -> Arrays.stream(word.split(""))).distinct().collect(Collectors.toList());
 
-     //   System.out.println(stringList);
-     //   stringList.forEach(s -> System.out.println(s));
+        stringList.forEach(System.out::println);
 
     }
 }
