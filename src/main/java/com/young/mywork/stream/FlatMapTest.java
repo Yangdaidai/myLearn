@@ -3,7 +3,7 @@ package com.young.mywork.stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class FlatMapTest {
@@ -11,6 +11,14 @@ public class FlatMapTest {
 
 
     public static void main(String[] args) {
+
+        Student student = new Student();
+        if (Objects.isNull(student)){
+            System.out.println("student is null !");
+        }else {
+            System.out.println("student");
+        }
+
         String[] strings = {"Hello", "World"};
 
 
