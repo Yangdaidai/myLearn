@@ -1,4 +1,4 @@
-package com.young.mywork.common.collection.sort;
+package com.young.mywork.common.sort;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.young.mywork.common.collection.sort;
+package com.young.mywork.common.sort;
 
 public class BubbleSort {
     public static void main(String[] args) {

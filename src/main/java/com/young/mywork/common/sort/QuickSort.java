@@ -1,17 +1,20 @@
-package com.young.mywork.common.collection.sort;
+package com.young.mywork.common.sort;
 
 public class QuickSort {
 
     public static int getMiddle(int[] arr, int low, int high) {
-        int temp = arr[low];
+        int temp = arr[low];         //temp 就是基准数
+
         while (low < high) {
 
-            while (low < high && arr[high] > temp) {
+            //先看右边，依次往左递减
+            while (low < high && arr[high] >= temp) {
                 high--;
             }
             arr[low] = arr[high]; //比中轴小的记录移到低端
 
-            while (low < high && arr[low] < temp) {
+            //再看左边，依次往右递增
+            while (low < high && arr[low] <= temp) {
                 low++;
             }
             arr[high] = arr[low]; //比中轴大的记录移到高端
@@ -23,8 +26,10 @@ public class QuickSort {
     public static void unckSort(int[] list, int low, int high) {
         if (low < high) {
             int middle = getMiddle(list, low, high);
-            unckSort(list, low, middle - 1);
-            unckSort(list, middle + 1, high);
+            unckSort(list, low, middle - 1);             //递归调用左半数组
+
+            unckSort(list, middle + 1, high);            //递归调用右半数组
+
         }
     }
 
@@ -35,11 +40,11 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        int[] number={13,15,24,99,14,11,1,2,3};
+        int[] number = {13, 15, 24, 99, 14, 11, 2, 1, 2, 3};
         quick(number);
-
         for (int i : number) {
-            System.out.print(i+" ");
+            System.out.print(i + " ");
         }
     }
+
 }
