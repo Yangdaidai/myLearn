@@ -1,4 +1,4 @@
-package com.young.mywork.common.collection;
+package com.young.mywork.common.collection.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;

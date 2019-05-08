@@ -1,4 +1,4 @@
-package com.young.mywork.common.collection;
+package com.young.mywork.common.collection.map;
 
 import java.util.HashMap;
 import java.util.Map;

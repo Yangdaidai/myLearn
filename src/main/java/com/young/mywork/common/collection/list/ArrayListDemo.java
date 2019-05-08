@@ -1,4 +1,4 @@
-package com.young.mywork.common.collection;
+package com.young.mywork.common.collection.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,13 +21,19 @@ public class ArrayListDemo {
     //2. 基本类型数据如何解决呢？
     //可以通过包装类把基本类型转为对象类型，存放引用就可以解决这个问题。更方便的，由于有了自动拆箱和装箱功能，
     // 基本数据类型和其对应对象（包装类）之间的转换变得很方便，想把基本数据类型存入集合中，直接存就可以了，
-    // 系统会自动将其装箱成封装类，然后加入到集合当中。
+    // 系统会自动将其装箱成包装类，然后加入到集合当中。
 
     public static void main(String[] args) {
 
         //ArrayList 类提供了快速的基于索引的成员访问方式，对尾部成员的增加和删除支持较好。
         // 使用 ArrayList 创建的集合，允许对集合中的元素进行快速的随机访问，不过，
         // 向 ArrayList 中插入与删除元素的速度相对较慢
+
+        /**
+         * 1. 不是线程安全的，不是线程同步的。
+         * 2.ArrayList是通过可变大小的数组实现的，允许null在内的所有元素。
+         * 3.ArrayList中存放顺序和添加顺序是一致的。并且可重复元素。
+         */
 
         List<Integer> list = new ArrayList<>();
         list.add(1);
@@ -52,7 +58,7 @@ public class ArrayListDemo {
         System.out.println("list :" + list.toString());
         System.out.println("list1 :" + list1.toString());
 
-        System.out.println("list中 2第一次出现的位置是 : "+list.indexOf(2));
-        System.out.println("list中 2最后一次出现的位置是 : "+list.lastIndexOf(4));
+        System.out.println("list中 2第一次出现的位置是 : " + list.indexOf(2));
+        System.out.println("list中 2最后一次出现的位置是 : " + list.lastIndexOf(4));
     }
 }
