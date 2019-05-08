@@ -7,7 +7,7 @@ import java.util.List;
 
 public class CollectionsUtils {
 
-    //态方法有一种情况需要注意一下，那就是在类中的静态方法使用泛型：静态方法无法访问类上定义的泛型；
+    //泛型方法有一种情况需要注意一下，那就是在类中的静态方法使用泛型：静态方法无法访问类上定义的泛型；
     // 如果静态方法操作的引用数据类型不确定的时候，必须要将泛型定义在方法上。
     //即：如果静态方法要使用泛型的话，必须将静态方法也定义成泛型方法 。
 
@@ -45,16 +45,19 @@ public class CollectionsUtils {
         List<String> olds= new ArrayList<>();
         olds.add("1");
         olds.add("2");
+
         olds.add("4");
         List<String> news = new ArrayList<>();
         news.add("1");
         news.add("2");
+
         news.add("3");
+        news.add("4");
 
         deleteEqualList(olds,news,"value");
 
         olds.forEach(System.out::println);
-        System.out.println("---");
+        System.out.println("------");
         news.forEach(System.out::println);
     }
 }

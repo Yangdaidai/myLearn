@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ListDemo {
+public class ListSwapDemo {
 
 
     public static void main(String[] args) {
@@ -16,7 +16,12 @@ public class ListDemo {
         list.add("202900000005"); //双拼
         list.add("-1");
 
+        swap(list);
 
+
+    }
+
+    private static void swap(List<String> list) {
         if (list.size() > 0 && !list.isEmpty()) {
 
             int i = Collections.binarySearch(list, "202900000002");
@@ -38,7 +43,5 @@ public class ListDemo {
             list.forEach(System.out::println);
 
         }
-
-
     }
 }

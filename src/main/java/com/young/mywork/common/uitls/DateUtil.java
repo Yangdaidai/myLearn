@@ -12,7 +12,7 @@ public class DateUtil {
     private DateUtil() {
     }
 
-    //在多线程下会引起异常
+    //SimpleDateFormat 是线程不安全的,在多线程下会引起异常
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public static void main(String[] args) throws InterruptedException {

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class HashMapDemo {
+public class HashMapForeach {
     public static void main(String[] args) {
         Map<String, Integer> hashMap = new HashMap<>();
         hashMap.put("yang chang",20);
