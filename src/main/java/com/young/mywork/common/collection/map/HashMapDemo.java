@@ -55,7 +55,6 @@ public class HashMapDemo {
         hashMap.put(null, 17);
         hashMap.put("ai", 19);
 
-
         //遍历1：获取key的Set集合
         //  Set<String> keySet = hashMap.keySet();
         for (String key : hashMap.keySet()) {
@@ -96,7 +95,11 @@ public class HashMapDemo {
         System.out.println(equals1);
         System.out.println(app == app2);
 
+
         //基本数据类型比较大小用==
+       int a=10;
+       int b=90;
+       System.out.println(a==b);
 
         //hashMap新增:
         //在进行key一致性判断时，首先通过hash值判断，再通过equals()或者==进行判断

@@ -13,11 +13,14 @@ public class TreeSetSort {
         //Exception in thread "main" java.lang.ClassCastException: com.young.mywork.common.collection.set.compare.App
         // cannot be cast to java.lang.Comparable
 
-
         //通过查看源码发现，在TreeSet调用add方法时，会调用到底层TreeMap的put方法，
         // 在put方法中会调用到compare(key, key)方法，进行key大小的比较
         //在比较的时候，会将传入的key进行类型强转，所以当我们自定义的App类进行比较的时候，
         // 自然就会抛出异常，因为App类并没有实现Comparable接口；
+
+        //        自定义类的集合类比较 :
+        //        -- 1.实现comparable接口 ,重写compareTo()方法
+        //        -- 2.自定义比较器,实现comparator接口 ,重写compare()方法
 
         //App1实现comparable接口
         //   comparableSort();

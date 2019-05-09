@@ -12,7 +12,7 @@ public class HashSetDemo {
     /**
      *      1. HashSet存储不能够存储相同的元素，元素是否相同的判断：重写元素的equals方法。
      * equals方法和hashCode方法必须兼容，如：equals方法判断的是用户的名字name，
-     *那么hashCode的返回的hashCode必须是name.hashcode（）；
+     * 那么hashCode的返回的hashCode必须是name.hashcode（）；
      *
      *      2. HashSet存储是无序的，保存的顺序与添加的顺序是不一致的，它不是线性结构，而是散列结构，
      * （通过散列表：散列单元指向链表）。因此，HashSet的查询效率相对比较高。

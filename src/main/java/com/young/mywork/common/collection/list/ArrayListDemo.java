@@ -23,6 +23,20 @@ public class ArrayListDemo {
     // 基本数据类型和其对应对象（包装类）之间的转换变得很方便，想把基本数据类型存入集合中，直接存就可以了，
     // 系统会自动将其装箱成包装类，然后加入到集合当中。
 
+
+    /**
+     *  自定义类的集合类比较 :
+     *  -- 1.自定义类实现comparable接口 ,重写compareTo()方法
+     *  -- 2.自定义比较器,实现comparator接口 ,重写compare()方法
+     */
+
+    /**
+     * List都可以添加null元素
+     * HashMap可以有1个key为null的元素，TreeMap不能有key为null的元素
+     * Set底层是Map
+     * 所以HashSet可以有1个null的元素，TreeSet不能有key为null的元素。
+     */
+
     public static void main(String[] args) {
 
         //ArrayList 类提供了快速的基于索引的成员访问方式，对尾部成员的增加和删除支持较好。
