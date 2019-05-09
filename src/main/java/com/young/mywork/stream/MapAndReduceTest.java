@@ -2,10 +2,7 @@ package com.young.mywork.stream;
 
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MapAndReduceTest {
@@ -39,8 +36,8 @@ public class MapAndReduceTest {
         list.add(stuList1);
 
         //使用map方法获取list数据中的name的长度
-        //  List<Integer> length = stuList.stream().map(Student::getName).map(String::length).collect(Collectors.toList());
-        // System.out.println(length);
+         List<Integer> length = stuList.stream().map(Student::getName).map(String::length).collect(Collectors.toList());
+         System.out.println(length);
 
         //将每人的分数-10
         List<Integer> score = stuList.stream().map(Student::getScore).map(s -> s - 10).collect(Collectors.toList());
@@ -55,6 +52,9 @@ public class MapAndReduceTest {
         Integer max = stuList.stream().map(Student::getScore).reduce(Integer::max).orElse(0);
         System.out.println("max = " + max);
 
+        //自定义比较器 --> StudentComparator
+        List<Student> studentList = stuList.stream().sorted(new StudentComparator()).collect(Collectors.toList());
+        System.out.println("studentList : "+studentList);
 
         //   Integer min = stuList.stream().map(Student::getScore).reduce(Integer::min).orElse(0);
         //   System.out.println("min = " + min);
@@ -65,6 +65,7 @@ public class MapAndReduceTest {
         List<Integer> scoreList = list.stream().flatMap(Collection::stream).map(Student::getScore).distinct().sorted().collect(Collectors.toList());
         scoreList.forEach(System.out::println);
 
+        // toMap
         Map<String, Integer> scoreMap = stuList.stream().filter(student -> StringUtils.isNotBlank(student.getName())).collect(Collectors.toMap(Student::getName, Student::getScore));
 
         scoreMap.forEach((s, integer) -> System.out.println("name: "+s+" score: "+integer));

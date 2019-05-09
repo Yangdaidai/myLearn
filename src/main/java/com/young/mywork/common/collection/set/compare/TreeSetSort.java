@@ -2,6 +2,7 @@ package com.young.mywork.common.collection.set.compare;
 
 import java.util.Comparator;
 import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 /**
  * Author 10248
@@ -20,15 +21,14 @@ public class TreeSetSort {
         // 自然就会抛出异常，因为App类并没有实现Comparable接口；
 
         //App1实现comparable接口
-        comparableSort();
+        //   comparableSort();
 
-        ////自定义比较器：升序
+        ////自定义比较器,实现comparator接口：升序
         comparatorSort();
     }
 
     //自定义排序顺序：升序
     public static void customSort() {
-        TreeSet<App> treeSet = new TreeSet<>();
 
         //排序对象：
         App app1 = new App("hello", 10);
@@ -38,6 +38,7 @@ public class TreeSetSort {
 
 
         //添加到集合：
+        TreeSet<App> treeSet = new TreeSet<>();
         treeSet.add(app1);
         treeSet.add(app2);
         treeSet.add(app3);
@@ -62,11 +63,10 @@ public class TreeSetSort {
         treeSet.add(app4);
         treeSet.add(app5);
         treeSet.add(app6);
-
         System.out.println(treeSet);
     }
 
-    public static void comparatorSort() {
+    private static void comparatorSort() {
 
         TreeSet<App2> treeSet = new TreeSet<>(new AppComparator());
         App2 app4 = new App2("name", 25);
@@ -75,16 +75,5 @@ public class TreeSetSort {
         treeSet.add(app5);
         System.out.println(treeSet);
 
-    }
-
-
-}
-
-class AppComparator implements Comparator<App2> {
-    @Override
-    public int compare(App2 o1, App2 o2) {
-        int compare = o1.getName().length() - o2.getName().length();
-
-        return compare == 0 ? o1.getAge() - o2.getAge() : compare;
     }
 }
