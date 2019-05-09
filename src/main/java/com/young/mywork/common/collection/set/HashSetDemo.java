@@ -10,13 +10,16 @@ import java.util.HashSet;
 public class HashSetDemo {
 
     /**
-     * 1. HashSet存储不能够存储相同的元素，元素是否相同的判断：重写元素的equals方法。
+     *      1. HashSet存储不能够存储相同的元素，元素是否相同的判断：重写元素的equals方法。
      * equals方法和hashCode方法必须兼容，如：equals方法判断的是用户的名字name，
-     * 那么hashCode的返回的hashCode必须是name.hashcode（）；
-     * 2. HashSet存储是无序的，保存的顺序与添加的顺序是不一致的，它不是线性结构，而是散列结构，
+     *那么hashCode的返回的hashCode必须是name.hashcode（）；
+     *
+     *      2. HashSet存储是无序的，保存的顺序与添加的顺序是不一致的，它不是线性结构，而是散列结构，
      * （通过散列表：散列单元指向链表）。因此，HashSet的查询效率相对比较高。
-     * 3. HashSet不是线程安全的，不是线程同步的。这需要自己实现线程同步：Collections.synchronizedCollection()，方法实现。
-     * 4.集合中不能包含重复的对象，并且最多只允许包含一个 null 元素。
+     *
+     *      3. HashSet不是线程安全的，不是线程同步的。这需要自己实现线程同步：Collections.synchronizedCollection()，方法实现。
+     *
+     *      4.集合中不能包含重复的对象，并且最多只允许包含一个 null 元素。
      */
 
     //当你把对象加入HashSet时，HashSet(底层是hashMap)会先计算对象的hashcode值来判断对象加入的位置，同时也会与其他加入的对象的hashcode值作比较，
@@ -51,8 +54,6 @@ public class HashSetDemo {
         hashSet.add(null);
         hashSet.add(null);
         hashSet.forEach(o -> System.out.println("o = " + o));
-
-
 
 
         /**

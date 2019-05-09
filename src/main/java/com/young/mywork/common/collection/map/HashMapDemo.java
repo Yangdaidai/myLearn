@@ -7,7 +7,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-public class HashMapForeach {
+public class HashMapDemo {
     public static void main(String[] args) {
 
         //         HashMap基于哈希表，底层结构由数组来实现，添加到集合中的元素以“key-value”形式保存到数组中，
@@ -24,13 +24,15 @@ public class HashMapForeach {
         //        hashMap ---> 数组 + 链表
 
 
-        //     hashMap  它具有如下特点：
-
-        //允许存入null键，null值（null值只有一个，并存于数组第一个位置）
-        //无序集合，而且顺序会随着元素的添加而随时改变（添加顺序，迭代顺序不一致）
-        //随着元素的增加而动态扩容（与ArrayList原理一致）
-        //不存在重复元素（得益于hashCode算法和equals方法）
-        //线程不安全
+        /**
+         *  hashMap
+         *  它具有如下特点：
+         *         允许存入null键，null值（null值只有一个，并存于数组第一个位置）
+         *         无序集合，而且顺序会随着元素的添加而随时改变（添加顺序，迭代顺序不一致）
+         *         随着元素的增加而动态扩容（与ArrayList原理一致）
+         *         不存在重复元素（得益于hashCode算法和equals方法）
+         *         线程不安全
+         */
 
 
         // 为什么扩容的大小一定要是2的整数次幂，也就是2的N次方.
