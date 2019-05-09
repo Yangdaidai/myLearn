@@ -1,8 +1,6 @@
 package com.young.mywork.common.collection.set.compare;
 
-import java.util.Comparator;
 import java.util.TreeSet;
-import java.util.stream.Collectors;
 
 /**
  * Author 10248
@@ -14,6 +12,7 @@ public class TreeSetSort {
         // customSort();
         //Exception in thread "main" java.lang.ClassCastException: com.young.mywork.common.collection.set.compare.App
         // cannot be cast to java.lang.Comparable
+
 
         //通过查看源码发现，在TreeSet调用add方法时，会调用到底层TreeMap的put方法，
         // 在put方法中会调用到compare(key, key)方法，进行key大小的比较
