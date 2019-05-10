@@ -32,9 +32,9 @@ public class ArrayListDemo {
 
     /**
      * List都可以添加null元素
-     * HashMap可以有1个key为null的元素，TreeMap不能有key为null的元素
+     * HashMap可以有1个key为null的元素，TreeMap不能有key为null的元素,有序(自然排序,自定义排序)
      * Set底层是Map
-     * 所以HashSet可以有1个null的元素，TreeSet不能有key为null的元素。
+     * 所以HashSet可以有1个null的元素，TreeSet不能有key为null的元素,有序(自然排序,自定义排序)。
      */
 
     public static void main(String[] args) {

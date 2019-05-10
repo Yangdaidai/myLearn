@@ -24,6 +24,7 @@ public class TreeMapDemo {
         treeMap.put("hello", 20);
         treeMap.put("a", 18);
         treeMap.put("bill", 25);
+        treeMap.put("good", null);
 
         //遍历元素：
         for (Map.Entry<String, Integer> entry : treeMap.entrySet()) {
@@ -39,11 +40,13 @@ public class TreeMapDemo {
         Collection<Integer> values = treeMap.values();
         values.forEach(System.out::println);
 
+        Integer good = treeMap.remove("good");
+        System.out.println("good = " + good);
         /**
          *  自定义类的集合类比较 :
          *  -- 1.自定义类实现comparable接口 ,重写compareTo()方法
          *  -- 2.自定义比较器,实现comparator接口 ,重写compare()方法
          */
-        System.out.println(treeMap);
+        System.out.println(" treeMap is "+treeMap);
     }
 }

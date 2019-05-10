@@ -84,6 +84,12 @@ public class HashMapDemo {
         hashMap.put("yang", 36);
         App app = new App("yang", 35);
         App app1 = new App("yang", 35);
+
+        HashMap<String, App> appHashMap = new HashMap<>();
+        appHashMap.put("one",app);
+        appHashMap.put("two",app1);
+        System.out.println("appHashMap is : "+appHashMap);
+
         boolean equals = app.equals(app1);
         System.out.println(equals);  //equals 结果是  true 因为比较是对象里的内容,两个对象里面的内容是一样的
         System.out.println(app == app1);// == 结果是 false 因为 比较对象的在堆内存中的地址值,是两个对象,所以地址值不同
