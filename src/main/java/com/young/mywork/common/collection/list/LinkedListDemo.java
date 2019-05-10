@@ -27,7 +27,7 @@ public class LinkedListDemo {
         // Java实现多态有三个必要条件：继承、重写、向上转型。
         //    但是向上转型存在一些缺憾，那就是它必定会导致一些方法和属性的丢失，而导致我们不能够获取它们。
         //    所以父类类型的引用可以调用父类中定义的所有属性和方法，对于只存在与子类中的方法和属性它就望尘莫及了
-        //    List<String> linkedList = new LinkedList<>();
+        //    List1<String> linkedList = new LinkedList<>();
 
         LinkedList<String> linkedList = new LinkedList<>();
         String hello = "hello";

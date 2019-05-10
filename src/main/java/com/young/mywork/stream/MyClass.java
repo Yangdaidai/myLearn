@@ -8,10 +8,10 @@ public class MyClass {
     public static void main(String[] args) {
      //   Stream<String> languages = Stream.of("java", "python", "node", null, "ruby", null, "php");
 
-        // List<String> result = languages.collect(Collectors.toList());
+        // List1<String> result = languages.collect(Collectors.toList());
 
-       // List<String> result = languages.filter(x -> x!=null).collect(Collectors.toList());
-      //  List<String> result = languages.filter(Objects::nonNull).collect(Collectors.toList());
+       // List1<String> result = languages.filter(x -> x!=null).collect(Collectors.toList());
+      //  List1<String> result = languages.filter(Objects::nonNull).collect(Collectors.toList());
       //  result.forEach(System.out::println);
 
         Date dNow = new Date();

@@ -42,6 +42,7 @@ public class TreeMapDemo {
 
         Integer good = treeMap.remove("good");
         System.out.println("good = " + good);
+
         /**
          *  自定义类的集合类比较 :
          *  -- 1.自定义类实现comparable接口 ,重写compareTo()方法

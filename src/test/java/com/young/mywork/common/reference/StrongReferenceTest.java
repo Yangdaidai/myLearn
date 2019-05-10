@@ -1,4 +1,4 @@
-package com.young.mywork.common;
+package com.young.mywork.common.reference;
 
 import org.junit.Test;
 
