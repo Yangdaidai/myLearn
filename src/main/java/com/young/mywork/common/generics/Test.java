@@ -23,7 +23,7 @@ public class Test<T> {
 
         //通过上面的2个例子，我们不仅产生疑问，ArrayList中声明了类型转换，Test中没有声明，
         // 但是两者在运行期间都没有报错？那么ArrayList的声明意义何在呢 ?当再次查看ArrayList源码时发现，
-        // elementData对象实际上是一个Object类型数组，当我们获取元素并返回的时候，
+        // elementData对象实际上是一个Object类型数组，当我们获取元素(get())并返回的时候，
         // 编译器会根据方法的返回值进行类型安全检查，所以 return (E) elementData[index]才会有强制类型转换的情况；
         //
 
@@ -34,5 +34,6 @@ public class Test<T> {
 
         //由于泛型擦除机制的存在，在运行期间无法获取关于泛型参数类型的任何信息，
         // 自然也就无法对类型信息进行操作；例如：instanceof 、创建对象等；
+
     }
 }
