@@ -16,7 +16,7 @@ public class StringDemo {
         //        当然，需要我们注意的是，如果之前常量池中已经存在"xyz"这个字符串，那么，上面的语句就只会在堆中创建一个对象了。
 
         String str1 = "xyz";
-//        这样，就只会创建一个存放在字符串常量池中的对象（如果池中不存在这个字符串的话）。
+        //        这样，就只会创建一个存放在字符串常量池中的对象（如果池中不存在这个字符串的话）。
         System.out.println("str1 = " + str1);
 
         boolean equals = str.equals(str1);
