@@ -46,6 +46,13 @@ public class List1 {
         // 当我们执行get方法的时候，泛型同样不存在，也是被当做Object来返回；
         list.getClass().getMethod("add", Object.class).invoke(list, 250);
 
+        List list1=new ArrayList();
+
+        list1.add(22);
+        list1.add("good");
+        for (Object o : list1) {
+            System.out.println(o);
+        }
         System.out.println(list);
 
     }
