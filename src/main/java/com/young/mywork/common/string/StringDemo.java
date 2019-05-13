@@ -28,7 +28,10 @@ public class StringDemo {
         String str2 = "xy";
         String str3 = "xy";
         boolean b1 = str2 == str3;
-        System.out.println("b1 = " + b1); //true 从常量池中拿到的值,指向同一个引用
+        System.out.println("b1 = " + b1); //true
+        // 在创建字符串常量时，首先坚持字符串常量池是否存在该字符串。
+        // 存在该字符串，返回引用实例。
+        // 若不存在，则实例化该字符串并放入池中。
 
     }
 }
