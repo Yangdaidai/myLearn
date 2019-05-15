@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread;
+package com.young.mywork.common.thread.thread;
 
 /**
  * Author 10248

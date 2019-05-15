@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread;
+package com.young.mywork.common.thread.thread;
 
 import java.util.ArrayList;
 
