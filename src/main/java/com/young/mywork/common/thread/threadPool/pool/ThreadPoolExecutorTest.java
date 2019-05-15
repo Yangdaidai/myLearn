@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread.threadPool;
+package com.young.mywork.common.thread.threadPool.pool;
 
 import java.util.concurrent.*;
 
@@ -61,7 +61,7 @@ public class ThreadPoolExecutorTest {
      * @param blockingQueue   任务缓存队列
      * @param handler         拒绝策略
      */
-    public static void myTask(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> blockingQueue, RejectedExecutionHandler handler) {
+    private static void myTask(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> blockingQueue, RejectedExecutionHandler handler) {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, unit, blockingQueue, handler);
 
         for (int i = 0; i < 15; i++) {

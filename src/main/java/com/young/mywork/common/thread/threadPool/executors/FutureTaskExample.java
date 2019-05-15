@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread.executors;
+package com.young.mywork.common.thread.threadPool.executors;
 
 import java.util.concurrent.*;
 
@@ -40,16 +40,14 @@ public class FutureTaskExample {
 
                 }
                 System.out.println("Waiting for FutureTask2 to complete");
+                //果指定时间没有获取到结果，
+                // 直接抛出超时异常，TimeoutException
                 String taskName = futureTask2.get(5000L, TimeUnit.MILLISECONDS);
                 if (taskName != null) {
                     System.out.println("FutureTask2 output="+taskName);
                 }
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
-            } catch (TimeoutException e) {
+            } catch (InterruptedException | ExecutionException | TimeoutException e) {
                 e.printStackTrace();
             }
         }

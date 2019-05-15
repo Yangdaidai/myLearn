@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread.threadPool;
+package com.young.mywork.common.thread.threadPool.pool;
 
 /**
  * Author 10248
@@ -10,7 +10,7 @@ public class MyRunnable implements Runnable {
     // 正在执行的任务数
     private int num;
 
-    public MyRunnable(int num) {
+    private MyRunnable(int num) {
         this.num = num;
     }
 

@@ -1,4 +1,4 @@
-package com.young.mywork.common.thread.executors;
+package com.young.mywork.common.thread.threadPool.executors;
 
 import java.util.concurrent.Callable;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
 public class MyCallable implements Callable<String> {
     private long waitTime;
 
-    public MyCallable(int timeInMillis) {
+   public MyCallable(int timeInMillis) {
         this.waitTime = timeInMillis;
     }
 
