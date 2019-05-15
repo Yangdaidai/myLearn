@@ -10,7 +10,7 @@ public class MyRunnable implements Runnable {
     // 正在执行的任务数
     private int num;
 
-    private MyRunnable(int num) {
+    public MyRunnable(int num) {
         this.num = num;
     }
 
