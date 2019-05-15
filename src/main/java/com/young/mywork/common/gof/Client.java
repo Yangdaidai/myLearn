@@ -22,7 +22,7 @@ public class Client {
          *     对应的分支处理分成不同策略类来实现，使代码易于读懂和维护
          *     扩展性好，增加分支只需要增加对应的策略实现类和枚举。符合开闭原则
          *  缺点:
-         *  增加了多余的类
+         *      增加了多余的类
          */
 
         String payStrategyParam = "ALIPAY";//Param from front end
