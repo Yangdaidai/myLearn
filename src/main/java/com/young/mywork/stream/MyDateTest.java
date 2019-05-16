@@ -4,15 +4,8 @@ package com.young.mywork.stream;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class MyClass {
+public class MyDateTest {
     public static void main(String[] args) {
-     //   Stream<String> languages = Stream.of("java", "python", "node", null, "ruby", null, "php");
-
-        // List1<String> result = languages.collect(Collectors.toList());
-
-       // List1<String> result = languages.filter(x -> x!=null).collect(Collectors.toList());
-      //  List1<String> result = languages.filter(Objects::nonNull).collect(Collectors.toList());
-      //  result.forEach(System.out::println);
 
         Date dNow = new Date();
         Calendar calendar = Calendar.getInstance();

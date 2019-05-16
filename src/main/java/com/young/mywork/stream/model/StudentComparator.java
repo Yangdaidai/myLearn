@@ -1,4 +1,4 @@
-package com.young.mywork.stream;
+package com.young.mywork.stream.model;
 
 import java.util.Comparator;
 
