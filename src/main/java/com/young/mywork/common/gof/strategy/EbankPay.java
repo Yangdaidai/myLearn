@@ -1,4 +1,4 @@
-package com.young.mywork.common.gof;
+package com.young.mywork.common.gof.strategy;
 
 import com.young.mywork.common.gof.inter.PayStrategy;
 
@@ -7,9 +7,9 @@ import com.young.mywork.common.gof.inter.PayStrategy;
  * Date 2019/5/14 21:01
  * Description
  */
-public class WechatPay implements PayStrategy {
+public class EbankPay implements PayStrategy {
     @Override
     public void pay(double total) {
-        System.out.println("pay with wechatpay: " + total);
+        System.out.println("pay with ebankpay: " + total);
     }
 }

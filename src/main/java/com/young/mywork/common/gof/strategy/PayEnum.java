@@ -1,9 +1,9 @@
-package com.young.mywork.common.gof;
+package com.young.mywork.common.gof.strategy;
 
 public enum PayEnum {
-    ALIPAY("com.young.mywork.common.gof.Alipay"),
-    WECHATPAY("com.young.mywork.common.gof.WechatPay"),
-    EBANKPAY("com.young.mywork.common.gof.EbankPay");
+    ALIPAY("com.young.mywork.common.gof.strategy.Alipay"),
+    WECHATPAY("com.young.mywork.common.gof.strategy.WechatPay"),
+    EBANKPAY("com.young.mywork.common.gof.strategy.EbankPay");
 
     private String className;
 

@@ -1,4 +1,4 @@
-package com.young.mywork.common.gof;
+package com.young.mywork.common.gof.strategy;
 
 import com.young.mywork.common.gof.inter.PayStrategy;
 
