@@ -21,9 +21,15 @@ public class ThreadTest10 implements Runnable {
         while (true) {
             //如果大于0,就进行卖票
             if (count > 0) {
-                System.out.println(Thread.currentThread().getName() + "正在售票,剩余票数 :  " + count--);
-                continue;
+                synchronized (this) {  //加锁 会导致程序性能的下降
+                    if (count > 0) {
+
+                        System.out.println(Thread.currentThread().getName() + "正在售票,剩余票数 :  " + count--);
+                        continue;
+                    }
+                }
             }
+
             System.out.println(Thread.currentThread().getName() + "票源不足，此时可售票数为：" + count);
         }
     }
