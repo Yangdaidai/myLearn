@@ -7,8 +7,8 @@ public class InvokeTester {
         return a+b;
     }
 
-    public String echo(String messgae){
-        return "echo "+messgae;
+    public String echo(String message){
+        return "echo "+message;
     }
 
     public static void main(String[] args) throws Exception {
