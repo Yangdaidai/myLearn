@@ -1,6 +1,6 @@
 package com.young.mywork.common.gof.strategy;
 
-import com.young.mywork.common.gof.inter.PayStrategy;
+import com.young.mywork.common.gof.strategy.inter.PayStrategy;
 
 /**
  * Author 10248
