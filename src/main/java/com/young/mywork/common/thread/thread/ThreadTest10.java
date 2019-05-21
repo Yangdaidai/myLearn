@@ -42,7 +42,7 @@ public class ThreadTest10 implements Runnable {
 
     public static void main(String[] args) {
         ThreadTest10 ticket = new ThreadTest10();
-        //开启4个窗口来卖票
+        //开启4个窗口来卖票,不加锁时,会造成余票不对
         // 输出 : 窗口3票源不足，此时可售票数为：-1
         new Thread(ticket, "窗口1").start();
         new Thread(ticket, "窗口2").start();
