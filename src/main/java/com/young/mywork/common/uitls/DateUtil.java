@@ -24,7 +24,11 @@ public class DateUtil {
         //ThreadLocal
         ExecutorService executorService = Executors.newFixedThreadPool(100);
         for (int i = 0; i < 100; i++) {
-            Future<Date> dateFuture = executorService.submit(() -> parse("2019-05-16 15:07:40"));
+            Future<Date> dateFuture = executorService.submit(() -> {
+                String text = "2019-05-16 15:07:40";
+                localDate.set(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"));
+                return parse(text,localDate);
+            });
             try {
                     System.out.println("date = " + dateFuture.get());
             } catch (ExecutionException e) {
@@ -78,11 +82,11 @@ public class DateUtil {
     }
 
 
-    public static Date parse(String str) throws ParseException {
-        SimpleDateFormat simpleDateFormat = localDate.get();
+    public static Date parse(String str, ThreadLocal<SimpleDateFormat> localDate) throws ParseException {
+        SimpleDateFormat simpleDateFormat = DateUtil.localDate.get();
         if (simpleDateFormat == null) {
             simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.CHINA);
-            localDate.set(simpleDateFormat);
+            DateUtil.localDate.set(simpleDateFormat);
         }
         return simpleDateFormat.parse(str);
     }

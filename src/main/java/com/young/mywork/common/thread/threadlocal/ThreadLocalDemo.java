@@ -23,13 +23,17 @@ public class ThreadLocalDemo implements Runnable {
     @Override
     public void run() {
         try {
+
             //set值时通过ThreadLocalMap
             // key : 当前线程 ; value : System.currentTimeMillis()
             startTimeThreadLocal.set(System.currentTimeMillis());
             Long startTime = startTimeThreadLocal.get();
+
             Thread.sleep(100L);
             System.out.println(" someMethod is running!");
+
             Long endTime = System.currentTimeMillis();
+
             System.out.println("current thread "+Thread.currentThread().getName()+" method take time  = " + (endTime - startTime)+"毫秒");
 
         } catch (InterruptedException e) {
@@ -43,12 +47,13 @@ public class ThreadLocalDemo implements Runnable {
     public static void main(String[] args) throws InterruptedException {
 
         ThreadLocalDemo threadLocalDemo = new ThreadLocalDemo();
-        Thread thread = new Thread(threadLocalDemo);
-        thread.start();
+        threadLocalDemo.run();
+
         Thread.sleep(1000L);
 
-        Thread thread1 = new Thread(threadLocalDemo);
-        thread1.start();
+        ThreadLocalDemo threadLocalDemo1 = new ThreadLocalDemo();
+        threadLocalDemo1.run();
+
 
 
     }
