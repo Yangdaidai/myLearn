@@ -6,7 +6,7 @@ package com.young.mywork.common.gof.singleton;
  * Description
  */
 public class Singleton {
-    //l懒汉 //安全的单例模式
+    //l懒汉 //安全的单例模式 无锁
     private static Singleton instance;
 
     public static Singleton getInstance() {
