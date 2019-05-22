@@ -12,12 +12,12 @@ public class CollectionsUtils {
     //即：如果静态方法要使用泛型的话，必须将静态方法也定义成泛型方法 。
 
     //  输入两个元素类型相同的List，删除两个集合中相同的元素后返回
-    public static <T> void deleteEqualList(List<T> oldList, List<T> newList,String fieldName) {
-        if ((null==oldList||oldList.isEmpty())||(null==newList||newList.isEmpty())){
+    public static <T> void deleteEqualList(List<T> oldList, List<T> newList, String fieldName) {
+        if ((null == oldList || oldList.isEmpty()) || (null == newList || newList.isEmpty())) {
             return;
         }
         Iterator<T> iterator = newList.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             T nt = iterator.next();
             for (T ot : oldList) {
                 try {
@@ -25,7 +25,7 @@ public class CollectionsUtils {
                     Field newField = nt.getClass().getDeclaredField(fieldName);
                     oldField.setAccessible(true);
                     newField.setAccessible(true);
-                    if (oldField.get(ot).equals(newField.get(nt))){
+                    if (oldField.get(ot).equals(newField.get(nt))) {
                         oldList.remove(ot);
                         iterator.remove();
                         break;
@@ -33,16 +33,13 @@ public class CollectionsUtils {
                 } catch (NoSuchFieldException | IllegalAccessException e) {
                     e.printStackTrace();
                 }
-
-
             }
         }
-
     }
 
     public static void main(String[] args) {
 
-        List<String> olds= new ArrayList<>();
+        List<String> olds = new ArrayList<>();
         olds.add("1");
         olds.add("2");
 
@@ -54,7 +51,7 @@ public class CollectionsUtils {
         news.add("3");
         news.add("4");
 
-        deleteEqualList(olds,news,"value");
+        deleteEqualList(olds, news, "value");
 
         olds.forEach(System.out::println);
         System.out.println("------");
