@@ -54,6 +54,8 @@ public class ArrayListDemo {
         list.add(2);
         list.add(3);
         list.add(null);
+        list.add(5);
+        list.add(6);
 
         List<Integer> list1 = new ArrayList<>();
         list1.add(2);
@@ -65,6 +67,22 @@ public class ArrayListDemo {
 
         ListIterator<Integer> listIterator = list.listIterator();
         while (listIterator.hasNext()) System.out.println("value = " + listIterator.next());
+
+        ArrayList<Integer> integers = new ArrayList<>();
+        integers.add(5);
+        integers.add(3);
+        integers.add(4);
+        integers.add(5);
+        integers.add(10);
+
+        Iterator<Integer> iterator1 = integers.iterator();
+        while (iterator1.hasNext()) {
+            Integer next = iterator1.next();
+            if (null != next && next.equals(5)) {
+                iterator1.remove();
+            }
+            System.out.println("integers : " + integers);
+        }
 
 
         list.removeAll(list1); //从list集合中删除所有在list1集合中出现的元素 list : [1, null]; list1 : [2, 3, 4]
