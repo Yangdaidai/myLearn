@@ -75,6 +75,7 @@ public class ArrayListDemo {
         integers.add(5);
         integers.add(10);
 
+        //iterator删除元素
         Iterator<Integer> iterator1 = integers.iterator();
         while (iterator1.hasNext()) {
             Integer next = iterator1.next();
