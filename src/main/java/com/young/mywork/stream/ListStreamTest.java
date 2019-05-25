@@ -6,6 +6,7 @@ import com.young.mywork.stream.model.Order;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class ListStreamTest {
@@ -89,6 +90,22 @@ public class ListStreamTest {
         //按"/"分割
         String ids = orderList.stream().map(Order::getOrderId).collect(Collectors.joining("/"));
         System.out.println("ids = " + ids);
+
+        //串行流与并行流
+        long startTime = System.nanoTime();
+        List<Order> orderList1 = orderList.stream().sorted(Comparator.comparing(Order::getAmount).reversed()).collect(Collectors.toList());
+        long endTime = System.nanoTime();
+        long millis = TimeUnit.NANOSECONDS.toMillis(endTime - startTime);
+
+        System.out.println(String.format("parallel sort took: %d ms", millis));
+
+
+        long startTime1 = System.nanoTime();
+        List<Order> orderList2 = orderList.parallelStream().sorted(Comparator.comparing(Order::getAmount).reversed()).collect(Collectors.toList());
+        long endTime1 = System.nanoTime();
+        long millis1 = TimeUnit.NANOSECONDS.toMillis(endTime1 - startTime1);
+        System.out.println(String.format("parallel sort took: %d ms", millis1));
+
     }
 
 
