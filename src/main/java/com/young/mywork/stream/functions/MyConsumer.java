@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class MyConsumer {
 
     public static void main(String[] args) {
-        Consumer<Student> student=student1 -> System.out.println("name is "+student1.getName());
+        Consumer<Student> student=student1 -> System.out.println("name is : "+student1.getName()+"score is : "+student1.getScore());
         student.accept(new Student("angleBaby",99));
 
     }
