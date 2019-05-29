@@ -1,14 +1,13 @@
 #  myLearn
 ##  record some Java learn demo 
--   contents:
-
+- contents:
    - common
         -  array    
-   -  $\color{red}collection{red}$
+   - collection
        - list
        - set
        - map
-   -  $\color{red}stream{red}$
+   - stream
        - filter
        - map
        - reduce
