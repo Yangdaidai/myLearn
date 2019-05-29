@@ -1,8 +1,6 @@
 package com.young.mywork.common.collection.list;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.ListIterator;
 
 /**
@@ -56,6 +54,10 @@ public class ArrayListDemo {
         list.add(null);
         list.add(5);
         list.add(6);
+
+        Collections.shuffle(list);
+        System.out.println("shuffle list : "+list);
+
 
         List<Integer> list1 = new ArrayList<>();
         list1.add(2);
