@@ -1,14 +1,14 @@
 #  myLearn
 ##  record some Java learn demo 
--   <font color='red'>contents:</font> 
+-   contents:
 
    - common
-        -  <font color='red'>array</font>    
-   -  <font color='red'>collection</font>
+        -  array    
+   -  $\color{red}collection{red}$
        - list
        - set
        - map
-   -  <font color='red'>stream</font>
+   -  $\color{red}stream{red}$
        - filter
        - map
        - reduce
@@ -16,17 +16,17 @@
        - function
        - supplier
        
-    -  <font color='red'>reflection</font>
+    -  reflection
     
-    -  <font color='red'>generics</font>
+    - generics
     
-    -  <font color='red'>jvm</font>
+    -  jvm
     
-    -  <font color='red'>thread</font>
+    -  thread
     
-    -  <font color='red'>threadPool</font>
+    -  threadPool
     
-    -  <font color='red'>I/O </font>
+    -  I/O
     
-    -  <font color='red'>NIO </font>
+    -  NIO 
 
