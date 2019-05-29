@@ -2,7 +2,7 @@
 ##  record some Java learn demo 
 - contents:
    - common
-        -  array    
+       - array    
    - collection
        - list
        - set
