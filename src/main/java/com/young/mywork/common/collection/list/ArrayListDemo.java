@@ -1,7 +1,9 @@
 package com.young.mywork.common.collection.list;
 
-import java.util.*;
+import org.apache.commons.collections4.CollectionUtils;
+
 import java.util.ListIterator;
+import java.util.*;
 
 /**
  * Author 10248
@@ -56,7 +58,7 @@ public class ArrayListDemo {
         list.add(6);
 
         Collections.shuffle(list);
-        System.out.println("shuffle list : "+list);
+        System.out.println("shuffle list : " + list);
 
 
         List<Integer> list1 = new ArrayList<>();
@@ -95,5 +97,33 @@ public class ArrayListDemo {
 
         System.out.println("list中 2第一次出现的位置是 : " + list.indexOf(2));
         System.out.println("list中 2最后一次出现的位置是 : " + list.lastIndexOf(4));
+
+
+        List<Integer> list3 = new ArrayList<>();
+        list3.add(1);
+        list3.add(2);
+        list3.add(3);
+        list3.add(4);
+
+        List<Integer> list4 = new ArrayList<>();
+        list4.add(3);
+        list4.add(4);
+        list4.add(5);
+        list4.add(6);
+
+        //差集
+        //  Collection<Integer> disjunction = CollectionUtils.disjunction(list3, list4);
+        //   System.out.println("disjunction = " + disjunction);
+
+
+        //交集
+        Collection<Integer> retainAll = CollectionUtils.retainAll(list3, list4);
+        System.out.println("retainAll = " + retainAll);
+        System.out.println("----------------");
+        list3.removeAll(retainAll);
+        list4.removeAll(retainAll);
+        System.out.println("list3 = " +list3 );
+        System.out.println("----------------");
+        System.out.println("list4 = " +list4 );
     }
 }

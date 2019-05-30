@@ -42,19 +42,21 @@ public class CollectionsUtils {
         List<String> olds = new ArrayList<>();
         olds.add("1");
         olds.add("2");
-
         olds.add("4");
+
         List<String> news = new ArrayList<>();
         news.add("1");
         news.add("2");
+        news.add("4");
 
         news.add("3");
-        news.add("4");
 
         deleteEqualList(olds, news, "value");
 
         olds.forEach(System.out::println);
         System.out.println("------");
         news.forEach(System.out::println);
+
+
     }
 }
