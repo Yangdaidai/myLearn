@@ -28,6 +28,8 @@ public class IntrospectorTest {
         }
 
         User user = new User();
+        user.setId(110);
+        user.setName("wang");
         PropertyDescriptor name = new PropertyDescriptor("name", User.class);
         PropertyDescriptor id = new PropertyDescriptor("id", User.class);
 
