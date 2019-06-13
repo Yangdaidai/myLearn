@@ -41,6 +41,10 @@ public class ThreadPoolExecutorTest {
         final BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<>(5);
 
 
+        /**
+         * 线程池的拒绝策略，是指当任务添加到线程池中被拒绝，而采取的处理措施。
+         * 当任务添加到线程池中之所以被拒绝，可能是由于：第一，线程池异常关闭。第二，任务数量超过线程池的最大限制。
+         */
         //关注点3 明确拒绝策略
         //ThreadPoolExecutor.AbortPolicy: 丢弃任务并抛出RejectedExecutionException异常。 (默认)
         //ThreadPoolExecutor.DiscardPolicy：也是丢弃任务，但是不抛出异常。

@@ -44,5 +44,11 @@ public class StringDemo {
         // s4 直接从字符串常量池中取值。
 
         //Java1.7 字符串常量池在堆区
+
+        String a1="a";
+        String a2="ok";
+        String a3="good";
+        String join1 = String.join("-", a1,a2,a3);
+        System.out.println("join1 = " + join1);
     }
 }

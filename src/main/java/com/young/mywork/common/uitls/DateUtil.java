@@ -83,7 +83,7 @@ public class DateUtil {
 
 
     public static Date parse(String str, ThreadLocal<SimpleDateFormat> localDate) throws ParseException {
-        SimpleDateFormat simpleDateFormat = DateUtil.localDate.get();
+        SimpleDateFormat simpleDateFormat = localDate.get();
         if (simpleDateFormat == null) {
             simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.CHINA);
             DateUtil.localDate.set(simpleDateFormat);
