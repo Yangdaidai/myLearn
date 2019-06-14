@@ -52,7 +52,7 @@ public class ThreadPoolExecutorTest {
         //ThreadPoolExecutor.CallerRunsPolicy：由调用线程处理该任务
 
         //丢弃队列最前面的任务，然后重新尝试执行任务（重复此过程）
-        RejectedExecutionHandler handler = new ThreadPoolExecutor.DiscardOldestPolicy();
+        RejectedExecutionHandler handler = new ThreadPoolExecutor.CallerRunsPolicy();
         myTask(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, handler);
     }
 

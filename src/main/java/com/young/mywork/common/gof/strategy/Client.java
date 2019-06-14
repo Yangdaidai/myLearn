@@ -25,6 +25,11 @@ public class Client {
          *      增加了多余的类
          */
 
+        /**
+         *   策略模式只适用管理一组同类型的算法，并且这些算法是完全互斥的情况。也就是说任何时候，
+         *   多个策略中只有一个可以生效的那一种。如满减中的满20减10与满30减20之间；普通会员折扣与超级会员折扣之间等。
+         */
+
         String payStrategyParam = "ALIPAY";//Param from front end
         PayStrategy strategy = StrategyFactory.getStrategy(payStrategyParam);
         strategy.pay(12);
