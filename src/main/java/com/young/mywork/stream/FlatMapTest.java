@@ -18,14 +18,15 @@ public class FlatMapTest {
         if (Objects.isNull(student)){
             System.out.println("student is null !");
         }else {
-            System.out.println("student");
+            System.out.println("student = " + student);
+            System.out.println("student is not null");
         }
 
         String[] strings = {"Hello", "World"};
 
 
 
-        List<String> stringList = Arrays.asList(strings).stream().flatMap(s-> Arrays.stream(strings))
+        List<String> stringList = Arrays.stream(strings).flatMap(s-> Arrays.stream(strings))
                 .distinct()
                 .collect(Collectors.toList());
 
