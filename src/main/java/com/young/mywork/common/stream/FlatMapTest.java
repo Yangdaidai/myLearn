@@ -1,6 +1,6 @@
-package com.young.mywork.stream;
+package com.young.mywork.common.stream;
 
-import com.young.mywork.stream.model.Student;
+import com.young.mywork.common.stream.model.Student;
 
 import java.util.ArrayList;
 import java.util.Arrays;

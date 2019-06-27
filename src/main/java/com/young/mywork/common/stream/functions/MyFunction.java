@@ -1,4 +1,4 @@
-package com.young.mywork.stream.functions;
+package com.young.mywork.common.stream.functions;
 
 import java.util.function.Function;
 

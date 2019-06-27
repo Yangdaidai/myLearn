@@ -1,4 +1,4 @@
-package com.young.mywork.stream.model;
+package com.young.mywork.common.stream.model;
 
 
 import lombok.Data;

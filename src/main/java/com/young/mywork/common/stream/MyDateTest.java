@@ -1,4 +1,4 @@
-package com.young.mywork.stream;
+package com.young.mywork.common.stream;
 
 
 import java.text.SimpleDateFormat;

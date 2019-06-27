@@ -1,6 +1,6 @@
-package com.young.mywork.stream.functions;
+package com.young.mywork.common.stream.functions;
 
-import com.young.mywork.stream.model.Student;
+import com.young.mywork.common.stream.model.Student;
 
 import java.util.function.Supplier;
 

@@ -1,7 +1,7 @@
-package com.young.mywork.stream;
+package com.young.mywork.common.stream;
 
 
-import com.young.mywork.stream.model.Order;
+import com.young.mywork.common.stream.model.Order;
 
 import java.util.ArrayList;
 import java.util.Comparator;
