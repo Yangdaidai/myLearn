@@ -47,5 +47,38 @@ public class Array {
         int anInt = random1.nextInt(100);// nextInt()中的100是随机数的上限,产生的随机数为0-100的整数,不包括100。
         System.out.println("anInt = " + anInt);
 
+
+        //反转数组
+        int []  array={97,98,99,100};
+
+
+
+        int[] reverse1 = reverse1(array);
+        for (int i1 : reverse1) {
+            System.out.println("reverse1-i1 = " + i1);
+        }
+
     }
+    // 实现数组元素的翻转
+    public static int[] reverse(int[] arr){
+        // 遍历数组  //arr.length/2 需要互换的次数
+        for(int i = 0;i < arr.length / 2;i++){
+            // 交换元素
+            int temp = arr[arr.length -i - 1];
+            arr[arr.length -i - 1] = arr[i];
+            arr[i] = temp;
+        }
+        // 返回反转后的结果
+        return arr;
+    }
+
+    // 第二种方式
+    public static int[] reverse1(int[] arr){
+        int[] arr1 = new int[arr.length];
+        for(int i = arr.length-1;i >= 0;i--){
+            arr1[arr.length-i-1] = arr[i];
+        }
+        return arr1;
+    }
+
 }

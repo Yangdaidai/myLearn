@@ -29,7 +29,7 @@ public class StringDemo {
         String str3 = "xy";
         boolean b1 = str2 == str3;
         System.out.println("b1 = " + b1); //true
-        // 在创建字符串常量时，首先坚持字符串常量池是否存在该字符串。
+        // 在创建字符串常量时，首先检查字符串常量池是否存在该字符串。
         // 存在该字符串，返回引用实例。
         // 若不存在，则实例化该字符串并放入池中。
 
@@ -50,5 +50,19 @@ public class StringDemo {
         String a3="good";
         String join1 = String.join("-", a1,a2,a3);
         System.out.println("join1 = " + join1);
+
+        int num1 = 5;
+        int num2 = 10;
+        int temp;
+
+        temp=num1;
+        num1=num2;
+        num2=temp;
+
+        System.out.println("num1 = " + num1);
+        System.out.println("num2 = " + num2);
+
+
+
     }
 }
