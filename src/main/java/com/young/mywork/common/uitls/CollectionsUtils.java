@@ -44,6 +44,8 @@ public class CollectionsUtils {
         olds.add("2");
         olds.add("4");
 
+        olds.add("5");
+
         List<String> news = new ArrayList<>();
         news.add("1");
         news.add("2");
